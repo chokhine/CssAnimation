@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: sans-serif;
+            height: 100vh;
+            background: #555;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            width: 304px;
+            height: 104px;
+            border: 2px solid #e22020;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .roll {
+            width: 100px;
+            height: 1000%;
+            background: rgba(0, 0, 0, 0.1);
+            color: palevioletred;
+            position: absolute;
+            z-index: -1;
+        }
+        
+        .rollA {
+            top: -400%;
+            left: 0;
+        }
+        
+        .rollB {
+            top: -900%;
+            left: 100px;
+        }
+        
+        .rollC {
+            top: 0%;
+            left: 200px;
+        }
+        
+        .bb {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* z-index: 5; */
+        }
+        
+        .bb:nth-child(odd) {
+            background: paleturquoise;
+        }
+        /* .rollB .bb:nth-child(odd) {
+            background: yellowgreen;
+        }
+        
+        .rollC .bb:nth-child(odd) {
+            background: blueviolet;
+        } */
+        
+        .bb:nth-child(even) {
+            background: pink;
+        }
+        /* .rollB .bb:nth-child(even) {
+            background: lightsalmon;
+        }
+        
+        .rollC .bb:nth-child(even) {
+            background: hotpink;
+        } */
+        
+        @keyframes roll {
+            0% {
+                top: 0%;
+            }
+            10% {
+                top: -900%;
+            }
+            20% {
+                top: 0%;
+            }
+            30% {
+                top: -300%;
+            }
+            40% {
+                top: 0%;
+            }
+            50% {
+                top: -200%;
+            }
+            70% {
+                top: -500%;
+            }
+            100% {
+                top: -700%;
+            }
+        }
+        
+        @keyframes rollB {
+            0% {
+                top: 0%;
+            }
+            10% {
+                top: -500%;
+            }
+            20% {
+                top: 0%;
+            }
+            30% {
+                top: -900%;
+            }
+            40% {
+                top: 0%;
+            }
+            50% {
+                top: -300%;
+            }
+            70% {
+                top: -500%;
+            }
+            100% {
+                top: -700%;
+            }
+        }
+        
+        @keyframes rollC {
+            0% {
+                top: 0%;
+            }
+            10% {
+                top: -900%;
+            }
+            20% {
+                top: 0%;
+            }
+            30% {
+                top: -500%;
+            }
+            40% {
+                top: 0%;
+            }
+            50% {
+                top: -100%;
+            }
+            70% {
+                top: -400%;
+            }
+            100% {
+                top: -700%;
+            }
+        }
+        
+        .container:hover .rollA {
+            animation: roll 5s linear forwards;
+        }
+        
+        .container:hover .rollB {
+            animation: rollB 5s linear forwards;
+            animation-delay: 2s;
+        }
+        
+        .container:hover .rollC {
+            animation: rollC 5s linear forwards;
+            animation-delay: 4s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="rollA roll">
+            <div class="rollA0 bb">0</div>
+            <div class="rollA1 bb">1</div>
+            <div class="rollA2 bb">2</div>
+            <div class="rollA3 bb">3</div>
+            <div class="rollA4 bb">4</div>
+            <div class="rollA5 bb">5</div>
+            <div class="rollA6 bb">6</div>
+            <div class="rollA7 bb">7</div>
+            <div class="rollA8 bb">8</div>
+            <div class="rollA9 bb">9</div>
+        </div>
+        <div class="rollB roll">
+            <div class="rollB0 bb">0</div>
+            <div class="rollB1 bb">1</div>
+            <div class="rollB2 bb">2</div>
+            <div class="rollB3 bb">3</div>
+            <div class="rollB4 bb">4</div>
+            <div class="rollB5 bb">5</div>
+            <div class="rollB6 bb">6</div>
+            <div class="rollB7 bb">7</div>
+            <div class="rollB8 bb">8</div>
+            <div class="rollB9 bb">9</div>
+        </div>
+        <div class="rollC roll">
+            <div class="rollC0 bb">0</div>
+            <div class="rollC1 bb">1</div>
+            <div class="rollC2 bb">2</div>
+            <div class="rollC3 bb">3</div>
+            <div class="rollC4 bb">4</div>
+            <div class="rollC5 bb">5</div>
+            <div class="rollC6 bb">6</div>
+            <div class="rollC7 bb">7</div>
+            <div class="rollC8 bb">8</div>
+            <div class="rollC9 bb">9</div>
+        </div>
+
+    </div>
+</body>
+
+</html>

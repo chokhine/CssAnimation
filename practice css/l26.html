@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Effect</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        a {
+            width: 260px;
+            height: 100px;
+            font-size: 180%;
+            /* background-color: blanchedalmond; */
+            color: gold;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 2px solid transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        /* span:first-child {
+            width: 100%;
+            height: 75%;
+            position: absolute;
+        }
+        
+        span:first-child::before {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background-color: hotpink;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 1s;
+        }
+        
+        span:first-child::after {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background-color: blueviolet;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transition: all 1s;
+        }
+        
+        span:last-child {
+            width: 90%;
+            height: 100%;
+            position: absolute;
+        }
+        
+        span:last-child::before {
+            content: "";
+            width: 3px;
+            height: 100%;
+            background-color: hotpink;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        span:last-child::after {
+            content: "";
+            width: 3px;
+            height: 100%;
+            background-color: blueviolet;
+            position: absolute;
+            top: 0;
+            left: 100%;
+        }
+        
+        a:hover span:first-child::before {
+            transition-delay: 0.3s;
+            top: 100%;
+        }
+        
+        a:hover span:first-child::after {
+            transition-delay: 0.3s;
+            top: 0%;
+        }
+        
+        a:hover span:last-child::before {
+            background-color: blueviolet;
+        }
+        
+        a:hover span:last-child::after {
+            background-color: hotpink;
+        } */
+        
+        a::before {
+            content: "";
+            width: 100%;
+            height: 140%;
+            border-left: 2px solid red;
+            border-right: 2px solid yellow;
+            /* background-color: rgba(0, 0, 0, 0.3); */
+            position: absolute;
+            top: calc(-10% -2px);
+            left: -2px;
+            transition: all 0.3s;
+        }
+        
+        a::after {
+            content: "";
+            width: 120%;
+            height: 100%;
+            border-top: 2px solid red;
+            border-bottom: 2px solid yellow;
+            position: absolute;
+            top: 0;
+            left: calc(-10% -2px);
+            transition: all 1s;
+        }
+        
+        a:hover::before {
+            border-left: 2px solid yellow;
+            border-right: 2px solid red;
+        }
+        
+        a:hover::after {
+            transition-delay: 0.3s;
+            transform: rotateX(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <a href="#">Hover ME <span></span><span></span></a> -->
+    <a href="#">hover me</a>
+</body>
+
+</html>

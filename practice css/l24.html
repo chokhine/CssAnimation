@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Effect</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        a {
+            width: 280px;
+            height: 80px;
+            /* background-color: khaki; */
+            text-decoration: none;
+            font-size: 150%;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            mix-blend-mode: multiply;
+            transition: all 0.5s;
+        }
+        
+        a::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(234, 0, 255, 0.383);
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            z-index: -1;
+            transform-origin: top;
+            transition: all 0.5s;
+        }
+        
+        a::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 247, 255, 0.383);
+            position: absolute;
+            bottom: -3px;
+            right: -3px;
+            z-index: -1;
+            transform-origin: bottom;
+            transition: all 0.5s;
+        }
+        
+        a:hover::before {
+            top: 0;
+            left: 0;
+            transform: perspective(1000px) rotateX(80deg);
+        }
+        
+        a:hover::after {
+            bottom: 0;
+            right: 0;
+            transform: perspective(1000px) rotateX(-80deg);
+        }
+        
+        a:hover {
+            transition-delay: 0.2s;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">Button Hover Effect</a>
+</body>
+
+</html>

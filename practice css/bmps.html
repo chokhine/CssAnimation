@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            background-color: #211936;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .box {
+            width: 360px;
+            height: 200px;
+            /* background-color: #fff; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        b {
+            font-size: 1.5em;
+            font-family: sans-serif;
+            font-weight: normal;
+            animation: fixed 12s linear infinite;
+            animation-delay: calc(0.3s * var(--i));
+        }
+        
+        .circle {
+            width: 200px;
+            height: 200px;
+            border: 40px solid #140c1f;
+            border-radius: 50%;
+            margin: 0 -20px;
+        }
+        
+        .dot {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: #0f0;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: myanimationdot 12s linear infinite;
+            animation-delay: calc(0.3s * var(--i));
+            text-shadow: 0 0 5px #0f0, 0 0 15px #0f0, 0 0 25px #0f0, 0 20 50px #0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        @keyframes myanimationdot {
+            0% {
+                transform-origin: 100px 50%;
+                transform: translate(-50%, -50%) rotate(0deg);
+                filter: hue-rotate(0deg);
+            }
+            50% {
+                transform-origin: 100px 50%;
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+            50.000001% {
+                transform-origin: -60px 50%;
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+            100% {
+                transform-origin: -60px 50%;
+                transform: translate(-50%, -50%) rotate(0deg);
+                filter: hue-rotate(360deg);
+            }
+        }
+        
+        @keyframes fixed {
+            0% {
+                transform: rotate(0deg);
+                filter: hue-rotate(0deg);
+            }
+            50% {
+                transform: rotate(-360deg);
+            }
+            50.000001% {
+                transform: rotate(-360deg);
+            }
+            100% {
+                transform: rotate(0deg);
+                filter: hue-rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="dot" style="--i : 1"><b>B</b></div>
+        <div class="dot" style="--i : 2"><b>M</b></div>
+        <div class="dot" style="--i : 3"><b>P</b></div>
+        <div class="dot" style="--i : 4"><b>S</b></div>
+        <div class="dot" style="--i : 5"><b>L</b></div>
+        <div class="dot" style="--i : 6"><b>E</b></div>
+        <div class="dot" style="--i : 7"><b>A</b></div>
+        <div class="dot" style="--i : 8"><b>R</b></div>
+        <div class="dot" style="--i : 9"><b>N</b></div>
+        <div class="dot" style="--i : 10"><b>I</b></div>
+        <div class="dot" style="--i : 11"><b>N</b></div>
+        <div class="dot" style="--i : 12"><b>G</b></div>
+        <div class="dot" style="--i : 13"><b>C</b></div>
+        <div class="dot" style="--i : 14"><b>E</b></div>
+        <div class="dot" style="--i : 15"><b>N</b></div>
+        <div class="dot" style="--i : 16"><b>T</b></div>
+        <div class="dot" style="--i : 17"><b>E</b></div>
+        <div class="dot" style="--i : 18"><b>R</b></div>
+    </div>
+</body>
+
+</html>

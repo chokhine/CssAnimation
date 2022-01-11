@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Effect</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: sans-serif;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        a {
+            width: 280px;
+            height: 100px;
+            color: cyan;
+            font-size: 30px;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        a::before {
+            /* box-sizing: border-box; */
+            content: "";
+            width: 15%;
+            height: 30%;
+            border-top: 3px solid greenyellow;
+            border-left: 3px solid greenyellow;
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            transition: all 0.3s;
+        }
+        
+        a::after {
+            /* box-sizing: border-box; */
+            content: "";
+            width: 15%;
+            height: 30%;
+            border-bottom: 3px solid greenyellow;
+            border-right: 3px solid greenyellow;
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            transition: all 0.3s;
+        }
+        
+        a:hover::before,
+        a:hover::after {
+            width: calc(100% + 7px);
+            height: calc(100% + 7px);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">Hover Me</a>
+</body>
+
+</html>

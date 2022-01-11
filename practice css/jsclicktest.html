@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>test</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		body{
+			height: 100vh;
+			font-family: sans-serif;
+		}
+		section{
+			background: #ff0;
+			display: flex;
+		}
+		.left{
+			width: 20%;
+			height: 1000px;
+			background: blue;
+			text-align: center;
+			position: fixed;
+
+			/*transition: all 0.7s;
+			transform-origin: left;*/
+		}
+		.right{
+			width: 80%;
+			height: 1500px;
+			background: red;
+			padding: 100px;
+			position: absolute;
+			left: 20%;
+
+			/*transition: all 0.5s;*/
+		}
+		button{
+			position: absolute;
+		}
+		#btn2{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div id="left" class="left">
+			<p>
+				1<br>
+				1<br>
+
+				1<br>
+				1<br>
+				1<br>
+
+				1<br>1<br>
+				1<br>
+				1<br>
+				1<br>1<br>
+			</p>
+		</div>
+		<div id="right" class="right">
+			Lorem ipsum 
+			dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<button id="btn">click</button>
+		<button id="btn2">click2</button>
+		<script type="text/javascript">
+			let btn = document.getElementById('btn');
+
+			btn.onclick = function abc() {
+				document.getElementById('left').style.transform = 'scaleX(0)';
+				right.style.width = '100%';
+				btn.style.display = 'none';
+				btn2.style.display = 'block';
+				right.style.left = '0%';
+
+			}
+			let btn2 = document.getElementById('btn2');
+
+			btn2.onclick = function css() {
+				left.style.transform = 'scaleX(1)';
+				right.style.width = '80%';
+				btn2.style.display = 'none';
+				btn.style.display = 'block';
+				right.style.left = '20%';
+			}
+		</script>
+	</section>
+</body>
+</html>

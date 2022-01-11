@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Me</title>
+    <style class="text/css">
+        * {
+            padding: 0;
+            margin-top: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        a {
+            text-decoration: none;
+            width: 180px;
+            height: 70px;
+            font-size: 20px;
+            color: #fff;
+            text-transform: uppercase;
+            border: 2px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        a::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all 0.3s;
+        }
+        
+        span {
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        a:hover {
+            color: #fff;
+        }
+        
+        a:hover::before {
+            transform: rotate(15deg);
+        }
+        
+        a:hover span {
+            transform: rotate(360deg) scale(3.5) translate(-6px, -1px);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#"><span>H</span>over Me</a>
+</body>
+
+</html>
